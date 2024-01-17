@@ -101,7 +101,8 @@ function onAnswerSelect(e) {             //function to check the selected andwer
     var element = e.target
     if (element.matches("button") === true) {
         var index = parseInt(element.getAttribute("data-index"));
-        var correctAnswerIndex = currentQuestion.answers.indexOf(currentQuestion.correctAnswer)  //retive the index of the correct answer
+        var correctAnswerIndex = currentQuestion.correctAnswer  //retive the index of the correct answer
+        console.log(index, correctAnswerIndex)
         if (index === correctAnswerIndex) {  //answer was correct
             score += scoreIncrement //increase score
             renderFeedback("Correct!", "green", 1000, true)  //render feedback WITH audio
