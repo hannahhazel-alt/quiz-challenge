@@ -58,7 +58,7 @@ function startTimer() {
             timerEL.textContent = `${timeLeft} Seccond remaining`
         } else if (timeLeft === 1) {
             timerEL.textContent = `${timeLeft} Seccond remaining`
-        } else { //time has ran out
+        } else {
             endQuiz()
         }
 
@@ -127,7 +127,7 @@ function endQuiz() {
 //Function to handel score submission
 function handelSubmitScore() {
     if (initialsInput.value.length < 2) {
-        renderFeedback("You initials must be atleast 2 characters. Score NOT saved", "red", 3000)
+        renderFeedback("You initials must be 2 characters.", "red", 3000)
         return
     }
     var submitData = {
