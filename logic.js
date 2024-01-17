@@ -22,7 +22,7 @@ var timerEL = document.querySelector("#time")
 var timerDiv = document.querySelector(".timer")
 
 //Global Time variables
-var timeLeft = 60
+var timeLeft = 80
 var timePenalty = 15
 
 //Global Question variables
@@ -38,7 +38,7 @@ var scoreIncrement = 11;
 function startQuiz() {                      //Function to start or to restart the quiz
     questionsAlreadyAsked = []
     score = 0
-    timeLeft = 60
+    timeLeft = 80
     startScreen.remove()   //remove is used to unload this element from the DOM as it wont be used again until page is refreshed
     questionsDiv.classList.remove("hide")  //Hide class is removed to reveal elements
     timerDiv.classList.remove("hide")
@@ -71,12 +71,12 @@ function startTimer() {                          //Function in controll of the t
 }
 
 function getRandomQuestion() {               //Function to pick a random question from questions.js
-    var randomIndex = Math.floor(Math.random() * quizData.length)  //pick a random index number
+    var randomIndex = Math.floor(Math.random() * quizQuestions.length)  //pick a random index number
     while (questionsAlreadyAsked.includes(randomIndex)) {  //pick a new random number if the 1st one has alreay been asked
-        randomIndex = Math.floor(Math.random() * quizData.length)
+        randomIndex = Math.floor(Math.random() * quizQuestions.length)
     }
     questionsAlreadyAsked.push(randomIndex)  //update questionsAlreadyAsked array to include the newly genarated array index
-    var randQuestionData = quizData[randomIndex]
+    var randQuestionData = quizQuestions[randomIndex]
     currentQuestion = randQuestionData //i tried to avoid having currentQuestion as a global variabale but i didnt know how to get this into the event handeler :(
     return randQuestionData //retrun the random question, associated answers and correct answer
 }
@@ -94,7 +94,7 @@ function renderQuestionAndAnswers(currentQuestion) {
 }
 
 function onAnswerSelect(e) {             //function to check the selected andwer, the click event is passed into this
-    if (questionsAlreadyAsked.length >= quizData.length) { //user has answered all questions so end quiz
+    if (questionsAlreadyAsked.length >= quizQuestions.length) { //user has answered all questions so end quiz
         endQuiz()
         return
     }
