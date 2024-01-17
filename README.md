@@ -4,6 +4,8 @@ Using 3rd party APIs to create a quiz
 
 ## Description
 
+https://hannahhazel-alt.github.io/quiz-challenge/
+
 This is an interactive javascript based quiz to test your knowledge about javascript. I built this to test my own knowledge about javascript and my own understanding of js (kind of need to know the correct answers before writing the answers hahaha). I wanted to be able to store users score in order of highest to lowest, and have you beat the clock. Don't worry there are only 5 questions (so far) so this is relatively simple and easy. I wanted to build this as an enjoyable interactive fun test of knowledge, where you can compare your high scores and share amongst your friends to build on you knowledge.
 
 This was very tricky for me to complete as a beginner but I wanted to test my limits with this and identify where I need to focus more with my own understanding with js. My goal here is to have a functioning app that does stores high scores with your initials, tells you if your correct or incorrect and decuct points for every wrong answer.
